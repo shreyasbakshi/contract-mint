@@ -1,0 +1,18 @@
+# ── Node / Next.js (frontend) ──
+node_modules/
+.next/
+out/
+.env.local
+next-env.d.ts
+
+# ── Python (backend) ──
+.venv/
+__pycache__/
+*.pyc
+.env
+_storage/
+
+# ── Editor / OS / local tooling ──
+.DS_Store
+.claude/
+*.log

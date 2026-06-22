@@ -1,0 +1,17 @@
+run = "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"
+entrypoint = "app/main.py"
+modules = ["python-3.11"]
+
+[nix]
+channel = "stable-24_05"
+
+[env]
+# Add ANTHROPIC_API_KEY in the Replit "Secrets" tab (not here) to enable live Claude.
+CONTRACT_MINT_STORAGE_DIR = "./_storage"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
+
+[deployment]
+run = ["sh", "-c", "uvicorn app.main:app --host 0.0.0.0 --port ${PORT:-8000}"]
