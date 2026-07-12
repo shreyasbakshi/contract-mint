@@ -16,9 +16,10 @@ The rest of this section is the **technical** view of the same system.
 
 ## Agent architecture (as built)
 
-Pattern: **single agent + tools, orchestrated by code** — not a multi-agent swarm.
-FastAPI routes are the orchestrator; three functions call Claude; everything else is
-deterministic. Every LLM call has a deterministic offline fallback (runs with no API key).
+Pattern: **multiple specialized agents, orchestrated by code** — not an autonomous swarm.
+The agents (drafting, revision, redline) don't message each other or decide control flow;
+FastAPI routes call them in a fixed, auditable sequence. Everything else is deterministic,
+and every LLM call has a deterministic offline fallback (runs with no API key).
 
 ```mermaid
 flowchart TD

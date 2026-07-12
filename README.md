@@ -15,7 +15,7 @@ reducing dependence on external legal teams and cutting turnaround time.
 ## Design notes
 - India jurisdiction (Indian Contract Act 1872, GST/INR, stamp duty, Arbitration Act 1996).
 - Plain-language clauses (every clause has an "In plain words" gloss) + English/Marathi.
-- **Single agent + tools** orchestrated by code with human-in-the-loop gates — not a multi-agent swarm.
+- **Multiple specialized agents** (drafting, revision, redline + monitor/analysis) orchestrated by code with human-in-the-loop gates — not an autonomous swarm that self-directs.
   See [docs/architecture.md](docs/architecture.md).
 
 ## Layout

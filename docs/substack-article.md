@@ -1,6 +1,6 @@
 # Giving India's small merchants a legal team that fits in a browser tab
 
-*How I built Contract Mint — an AI that drafts supplier contracts and knows when to renegotiate them — without a "multi-agent swarm."*
+*How I built Contract Mint — an AI that drafts supplier contracts and knows when to renegotiate them — with a team of agents I kept on a short leash.*
 
 > **TL;DR** — India's small merchants sign supplier contracts blind and miss renewal windows worth real money. Contract Mint drafts those contracts in plain, India-law-aware language, and at renewal it reads the supplier's *actual performance data* to propose evidence-backed clause changes before you re-sign. The surprising part isn't the AI — it's how little autonomy I gave it. Here's why "less autonomous" is the right call when people are about to sign their name.
 
@@ -19,25 +19,25 @@ That's the gap **Contract Mint** fills. Two jobs:
 1. **Generate** a supplier contract from plain inputs — in language a non-lawyer actually understands, framed for Indian law (Contract Act 1872, GST, the Arbitration Act).
 2. **Renew intelligently** — watch for expiries, read the supplier's real performance data, and propose *specific clause changes* backed by evidence before you re-sign.
 
-## The temptation: build a swarm of agents
+## The temptation: an autonomous swarm
 
-The fashionable way to build this in 2026 is to spin up a dozen autonomous agents that message each other — a "Drafting Agent" talking to an "Orchestrator Agent" talking to a "Redline Agent" — and let them figure it out.
+Contract Mint *is* a multi-agent system. There's a **Drafting Agent**, a **Revision Agent**, a **Redline Agent**, plus a Renewal Monitor and a Performance Analysis step. Each is a specialist with one narrow job.
 
-I didn't do that. And I think the reason is the most useful thing in this whole post.
+What I deliberately *didn't* build is the fashionable version: a swarm of **autonomous** agents that message each other, decide their own next steps, and "figure it out" in free text — a Drafting Agent chatting to an Orchestrator Agent chatting to a Redline Agent, unsupervised. And the reason is the most useful thing in this whole post.
 
-**Contracts are a legal-liability product.** When an AI writes a clause that ends up in a signed agreement, "the model decided to" is not an acceptable answer. You need to know *which step produced which words, and why.* Autonomous agents improvising in free text are the opposite of that.
+**Contracts are a legal-liability product.** When an AI writes a clause that ends up in a signed agreement, "the agents decided to" is not an acceptable answer. You need to know *which step produced which words, and why.* Agents improvising and negotiating amongst themselves in free text are the opposite of that.
 
-So Contract Mint is deliberately boring in the best way: **a single agent plus tools, orchestrated by plain code, with humans in the loop at every gate.**
+So Contract Mint keeps its agents on rails: **multiple specialized agents, but orchestrated by plain code — not by each other — with humans in the loop at every gate.**
 
 ## What it actually looks like
 
-There is no message bus and no orchestrator process. The API routes *are* the orchestrator. Three functions call the model; everything around them is deterministic code.
+The agents don't talk to each other and nothing decides its own control flow. There's no message bus and no *autonomous* orchestrator — the API routes are the orchestrator, calling each agent in a fixed, auditable sequence. Each agent is a specialized function with its own prompt and output schema; everything around them is deterministic code.
 
 ```
   Merchant → Next.js (Vercel) → FastAPI routes → tools
                                         │
               ┌─────────────────────────┼─────────────────────────┐
-        deterministic                 the 3 LLM tools         deterministic
+        deterministic              3 specialized agents      deterministic
         clause templates    drafting · revision · redline    performance analysis
                                         │
                           ┌─────────────┴─────────────┐

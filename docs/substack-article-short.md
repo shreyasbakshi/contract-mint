@@ -8,11 +8,11 @@ If you run a small shop in India, you sign supplier agreements constantly — an
 
 That's the gap **Contract Mint** fills. It does two things: **generate** a supplier contract in plain, Indian-law-aware language, and **renew intelligently** — read the supplier's real performance data and propose specific, evidence-backed clause changes before you re-sign.
 
-## Why I didn't build a swarm of agents
+## Multiple agents — but not an autonomous swarm
 
-The fashionable approach in 2026 is a dozen autonomous agents messaging each other and "figuring it out." I went the opposite way, and that choice is the whole point.
+Contract Mint *is* a multi-agent system: a Drafting Agent, a Revision Agent, a Redline Agent, plus a Renewal Monitor and a Performance Analysis step, each a specialist with one narrow job. What I deliberately *didn't* build is the fashionable version — autonomous agents messaging each other, deciding their own next steps, and "figuring it out" unsupervised. That choice is the whole point.
 
-**Contracts are a legal-liability product.** When an AI writes a clause that ends up in a signed agreement, "the model decided to" is not an acceptable answer. You need to know which step produced which words, and why. So Contract Mint is deliberately boring: **a single agent plus tools, orchestrated by plain code, with a human at every gate.**
+**Contracts are a legal-liability product.** When an AI writes a clause that ends up in a signed agreement, "the agents decided to" is not an acceptable answer. You need to know which step produced which words, and why. So Contract Mint keeps its agents on rails: **multiple specialized agents, orchestrated by plain code — not by each other — with a human at every gate.**
 
 Three choices carry it:
 
