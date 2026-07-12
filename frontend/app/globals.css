@@ -49,6 +49,8 @@ header.topbar {
 .brand { font-weight: 700; font-size: 18px; letter-spacing: -0.2px; }
 .brand span { color: var(--accent); }
 .tag { color: var(--muted); font-size: 12px; }
+.auth-actions { display: inline-flex; align-items: center; gap: 8px; }
+.auth-actions .btn { padding: 6px 12px; font-size: 13px; }
 
 h1 { font-size: 28px; letter-spacing: -0.5px; margin: 8px 0 4px; }
 h2 { font-size: 18px; margin: 28px 0 12px; }

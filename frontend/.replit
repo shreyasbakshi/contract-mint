@@ -8,6 +8,9 @@ channel = "stable-24_05"
 [env]
 # Point this at your Contract Mint backend (FastAPI). For a backend Repl, use its URL.
 NEXT_PUBLIC_API_BASE = "http://localhost:8000"
+# Clerk: set the real values in Replit -> Secrets (NOT here), so they aren't committed:
+#   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY = pk_...
+#   CLERK_SECRET_KEY                  = sk_...   (secret — Secrets only)
 
 [[ports]]
 localPort = 3000

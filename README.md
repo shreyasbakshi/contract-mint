@@ -1,3 +1,4 @@
+
 # Contract Mint
 
 Agentic SaaS that helps small Indian merchants (drop-shippers / small retailers, ≤50 employees)

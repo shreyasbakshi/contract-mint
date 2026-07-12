@@ -10,7 +10,7 @@ class LLM:
     """Thin wrapper over the Anthropic SDK.
 
     - Reasoning-heavy work (analysis, redline) -> Opus 4.8.
-    - High-volume work (drafting, applying edits) -> Sonnet 4.6.
+    - High-volume work (drafting, applying edits) -> Sonnet 5.
     Falls back to `enabled=False` when no API key is configured, so the rest of
     the app can run offline with deterministic template logic.
     """

@@ -10,7 +10,7 @@ class Settings(BaseSettings):
 
     anthropic_api_key: str = ""
     contract_mint_model_reasoning: str = "claude-opus-4-8"
-    contract_mint_model_drafting: str = "claude-sonnet-4-6"
+    contract_mint_model_drafting: str = "claude-sonnet-5"
     contract_mint_default_tenant: str = "demo-merchant"
     contract_mint_storage_dir: str = "./_storage"
 
