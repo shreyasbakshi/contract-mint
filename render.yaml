@@ -1,0 +1,19 @@
+# Render Blueprint for the Contract Mint FastAPI backend.
+# Import at https://render.com → New → Blueprint → connect this repo.
+# (The frontend is hosted separately on Vercel — see docs/vercel-setup.md.)
+services:
+  - type: web
+    name: contract-mint-backend
+    runtime: python
+    rootDir: backend
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      # Optional — without it the app runs in offline template mode.
+      # Set the real value in the Render dashboard (Environment), not here.
+      - key: ANTHROPIC_API_KEY
+        sync: false
