@@ -48,7 +48,7 @@ There is no message bus and no orchestrator process. The API routes *are* the or
                           └────────────────────────────┘
 ```
 
-*(For Substack: upload [`docs/images/agent-architecture.png`](images/agent-architecture.png) in place of the ASCII above — it's the same diagram, rendered.)*
+*(For Substack: upload [`docs/images/architecture-simple.png`](images/architecture-simple.png) here — a plain-English block diagram showing the agents grouped by use case, with a human approving every step. Use the more technical [`agent-architecture.png`](images/agent-architecture.png) only if your audience is engineers.)*
 
 Three design choices do all the heavy lifting:
 
