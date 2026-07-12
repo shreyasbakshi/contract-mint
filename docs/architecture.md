@@ -7,35 +7,10 @@
 ## Simplified view (for non-technical readers)
 
 The whole product in one picture — the agents grouped by the two use cases, with a human
-approving every step. ([`docs/images/architecture-simple.png`](images/architecture-simple.png))
+approving every step. Source: [`architecture-simple.svg`](images/architecture-simple.svg)
+(editable) → exported to [`architecture-simple.png`](images/architecture-simple.png).
 
-```mermaid
-flowchart TB
-    M["Shop owner<br/>(small Indian merchant)"] --> APP["Contract Mint"]
-    APP --> UC1
-    APP --> UC2
-
-    subgraph UC1["USE CASE 1 - Create a contract"]
-        direction TB
-        D1["Drafting Agent<br/>writes the first draft from your details"]
-        D2["Revision Agent<br/>edits it by voice or text"]
-        D3["Ready-to-sign Word document"]
-        D1 --> D2 --> D3
-    end
-
-    subgraph UC2["USE CASE 2 - Renew intelligently"]
-        direction TB
-        R1["Renewal Monitor<br/>flags contracts expiring soon"]
-        R2["Performance Analysis<br/>finds the supplier's problems in their data"]
-        R3["Redline Agent<br/>proposes exact clause changes, with reasons"]
-        R4["Updated contract, backed by evidence"]
-        R1 --> R2 --> R3 --> R4
-    end
-
-    UC1 --> OK["You review and approve at every step"]
-    UC2 --> OK
-    OK --> CLAUDE["Powered by Claude AI"]
-```
+![Contract Mint — how it works](images/architecture-simple.png)
 
 The rest of this section is the **technical** view of the same system.
 

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1080" viewBox="0 0 1600 1080" font-family="'Helvetica Neue', Helvetica, Arial, sans-serif">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#F7F8FC"/><stop offset="1" stop-color="#ECECFF"/>
+</linearGradient>
+<linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#4338CA"/>
+</linearGradient>
+<linearGradient id="uc1h" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#6366F1"/><stop offset="1" stop-color="#818CF8"/>
+</linearGradient>
+<linearGradient id="uc2h" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#059669"/><stop offset="1" stop-color="#34D399"/>
+</linearGradient>
+<linearGradient id="foot" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#0EA5E9"/>
+</linearGradient>
+<filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+  <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#1E293B" flood-opacity="0.14"/>
+</filter>
+<filter id="shs" x="-20%" y="-20%" width="140%" height="140%">
+  <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#1E293B" flood-opacity="0.10"/>
+</filter>
+</defs>
+<rect width="1600" height="1080" fill="url(#bg)"/>
+<text x="800.0" y="58" font-size="34" fill="#0F172A" font-weight="700" text-anchor="middle" letter-spacing="0.2">How Contract Mint works</text>
+<text x="800.0" y="90" font-size="17" fill="#64748B" font-weight="400" text-anchor="middle" letter-spacing="0">An AI contract team for small Indian merchants — you approve every step</text>
+<rect x="620.0" y="118" width="360" height="52" rx="26.0" ry="26.0" fill="#FFFFFF" stroke="#E6E8EF" stroke-width="1.5" filter="url(#shs)"/>
+<circle cx="650.0" cy="144.0" r="9" fill="#6366F1"/>
+<text x="675.0" y="150.0" font-size="20" fill="#0F172A" font-weight="600" text-anchor="start" letter-spacing="0">Small Indian merchant</text>
+<rect x="650.0" y="200" width="300" height="66" rx="16" ry="16" fill="url(#brand)" filter="url(#sh)"/>
+<text x="800.0" y="230" font-size="26" fill="#FFFFFF" font-weight="700" text-anchor="middle" letter-spacing="0">Contract Mint</text>
+<text x="800.0" y="252" font-size="13.5" fill="#E0E7FF" font-weight="400" text-anchor="middle" letter-spacing="0">drafting  •  revision  •  renewal intelligence</text>
+<path d="M800.0,170 L800.0,200" stroke="#64748B" stroke-width="2.5" fill="none"/>
+<path d="M760.0,266 C410.0,296 410.0,270 410.0,310" stroke="#6366F1" stroke-width="2.5" fill="none"/>
+<path d="M840.0,266 C1190.0,296 1190.0,270 1190.0,310" stroke="#059669" stroke-width="2.5" fill="none"/>
+<rect x="80" y="310" width="660" height="548" rx="22" ry="22" fill="#FFFFFF" stroke="#E6E8EF" stroke-width="1.5" filter="url(#sh)"/><path d="M102,310 h616 a22,22 0 0 1 22,22 v46 h-660 v-46 a22,22 0 0 1 22,-22 z" fill="url(#uc1h)"/><circle cx="122" cy="344" r="17" fill="#FFFFFF" opacity="0.9"/><text x="122" y="351" font-size="20" fill="#4F46E5" font-weight="800" text-anchor="middle" letter-spacing="0">1</text><text x="152" y="351" font-size="23" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">Create a contract</text>
+<rect x="860" y="310" width="660" height="548" rx="22" ry="22" fill="#FFFFFF" stroke="#E6E8EF" stroke-width="1.5" filter="url(#sh)"/><path d="M882,310 h616 a22,22 0 0 1 22,22 v46 h-660 v-46 a22,22 0 0 1 22,-22 z" fill="url(#uc2h)"/><circle cx="902" cy="344" r="17" fill="#FFFFFF" opacity="0.9"/><text x="902" y="351" font-size="20" fill="#059669" font-weight="800" text-anchor="middle" letter-spacing="0">2</text><text x="932" y="351" font-size="23" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">Renew intelligently</text>
+<rect x="108" y="402" width="604" height="88" rx="16" ry="16" fill="#FBFCFE" stroke="#EEF1F6" stroke-width="1.5" filter="url(#shs)"/><circle cx="148" cy="446.0" r="21" fill="#6366F1" opacity="0.14"/><circle cx="148" cy="446.0" r="21" fill="none" stroke="#6366F1" stroke-width="2"/><text x="148" y="452.0" font-size="18" fill="#6366F1" font-weight="800" text-anchor="middle" letter-spacing="0">1</text><text x="188" y="439" font-size="21" fill="#0F172A" font-weight="700" text-anchor="start" letter-spacing="0">Drafting Agent</text><text x="188" y="464" font-size="15.5" fill="#64748B" font-weight="400" text-anchor="start" letter-spacing="0">writes the first draft from your details</text><path d="M401.0,500 l9,9 l9,-9" stroke="#6366F1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<rect x="108" y="510" width="604" height="88" rx="16" ry="16" fill="#FBFCFE" stroke="#EEF1F6" stroke-width="1.5" filter="url(#shs)"/><circle cx="148" cy="554.0" r="21" fill="#6366F1" opacity="0.14"/><circle cx="148" cy="554.0" r="21" fill="none" stroke="#6366F1" stroke-width="2"/><text x="148" y="560.0" font-size="18" fill="#6366F1" font-weight="800" text-anchor="middle" letter-spacing="0">2</text><text x="188" y="547" font-size="21" fill="#0F172A" font-weight="700" text-anchor="start" letter-spacing="0">Revision Agent</text><text x="188" y="572" font-size="15.5" fill="#64748B" font-weight="400" text-anchor="start" letter-spacing="0">edit by voice or text — every change is tracked</text><path d="M401.0,608 l9,9 l9,-9" stroke="#6366F1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<rect x="108" y="618" width="604" height="88" rx="16" ry="16" fill="#FBFCFE" stroke="#EEF1F6" stroke-width="1.5" filter="url(#shs)"/><circle cx="148" cy="662.0" r="21" fill="#6366F1" opacity="0.14"/><circle cx="148" cy="662.0" r="21" fill="none" stroke="#6366F1" stroke-width="2"/><text x="148" y="668.0" font-size="18" fill="#6366F1" font-weight="800" text-anchor="middle" letter-spacing="0">3</text><text x="188" y="655" font-size="21" fill="#0F172A" font-weight="700" text-anchor="start" letter-spacing="0">Plain-language clauses</text><text x="188" y="680" font-size="15.5" fill="#64748B" font-weight="400" text-anchor="start" letter-spacing="0">in English &amp; Marathi, framed for Indian law</text><path d="M401.0,716 l9,9 l9,-9" stroke="#6366F1" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<rect x="108" y="726" width="604" height="88" rx="16" ry="16" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5" filter="url(#shs)"/><circle cx="148" cy="770.0" r="21" fill="#059669"/><path d="M139,770.0 l6,7 l12,-14" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="188" y="763" font-size="21" fill="#0F172A" font-weight="700" text-anchor="start" letter-spacing="0">Ready-to-sign Word document</text><text x="188" y="788" font-size="15.5" fill="#64748B" font-weight="400" text-anchor="start" letter-spacing="0"></text>
+<rect x="888" y="402" width="604" height="88" rx="16" ry="16" fill="#FBFCFE" stroke="#EEF1F6" stroke-width="1.5" filter="url(#shs)"/><circle cx="928" cy="446.0" r="21" fill="#059669" opacity="0.14"/><circle cx="928" cy="446.0" r="21" fill="none" stroke="#059669" stroke-width="2"/><text x="928" y="452.0" font-size="18" fill="#059669" font-weight="800" text-anchor="middle" letter-spacing="0">1</text><text x="968" y="439" font-size="21" fill="#0F172A" font-weight="700" text-anchor="start" letter-spacing="0">Renewal Monitor</text><text x="968" y="464" font-size="15.5" fill="#64748B" font-weight="400" text-anchor="start" letter-spacing="0">flags contracts expiring soon</text><path d="M1181.0,500 l9,9 l9,-9" stroke="#059669" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<rect x="888" y="510" width="604" height="88" rx="16" ry="16" fill="#FBFCFE" stroke="#EEF1F6" stroke-width="1.5" filter="url(#shs)"/><circle cx="928" cy="554.0" r="21" fill="#059669" opacity="0.14"/><circle cx="928" cy="554.0" r="21" fill="none" stroke="#059669" stroke-width="2"/><text x="928" y="560.0" font-size="18" fill="#059669" font-weight="800" text-anchor="middle" letter-spacing="0">2</text><text x="968" y="547" font-size="21" fill="#0F172A" font-weight="700" text-anchor="start" letter-spacing="0">Performance Analysis</text><text x="968" y="572" font-size="15.5" fill="#64748B" font-weight="400" text-anchor="start" letter-spacing="0">finds the supplier's problems in their own data</text><path d="M1181.0,608 l9,9 l9,-9" stroke="#059669" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<rect x="888" y="618" width="604" height="88" rx="16" ry="16" fill="#FBFCFE" stroke="#EEF1F6" stroke-width="1.5" filter="url(#shs)"/><circle cx="928" cy="662.0" r="21" fill="#059669" opacity="0.14"/><circle cx="928" cy="662.0" r="21" fill="none" stroke="#059669" stroke-width="2"/><text x="928" y="668.0" font-size="18" fill="#059669" font-weight="800" text-anchor="middle" letter-spacing="0">3</text><text x="968" y="655" font-size="21" fill="#0F172A" font-weight="700" text-anchor="start" letter-spacing="0">Redline Agent</text><text x="968" y="680" font-size="15.5" fill="#64748B" font-weight="400" text-anchor="start" letter-spacing="0">proposes exact clause changes, with reasons</text><path d="M1181.0,716 l9,9 l9,-9" stroke="#059669" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+<rect x="888" y="726" width="604" height="88" rx="16" ry="16" fill="#ECFDF5" stroke="#A7F3D0" stroke-width="1.5" filter="url(#shs)"/><circle cx="928" cy="770.0" r="21" fill="#059669"/><path d="M919,770.0 l6,7 l12,-14" stroke="#FFFFFF" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="968" y="763" font-size="21" fill="#0F172A" font-weight="700" text-anchor="start" letter-spacing="0">Updated contract, backed by evidence</text><text x="968" y="788" font-size="15.5" fill="#64748B" font-weight="400" text-anchor="start" letter-spacing="0"></text>
+<rect x="80" y="888" width="1440" height="140" rx="24" ry="24" fill="url(#foot)" filter="url(#sh)"/>
+<line x1="800.0" y1="916" x2="800.0" y2="1000" stroke="#FFFFFF" stroke-opacity="0.35" stroke-width="1.5"/>
+<circle cx="150" cy="958.0" r="26" fill="#FFFFFF" opacity="0.18"/>
+<path d="M142,958.0 l6,7 l14,-16" stroke="#FFFFFF" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="192" y="954.0" font-size="23" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">You review &amp; approve</text>
+<text x="192" y="982.0" font-size="16" fill="#DBEAFE" font-weight="400" text-anchor="start" letter-spacing="0">at every step — nothing changes without you</text>
+<circle cx="870.0" cy="958.0" r="26" fill="#FFFFFF" opacity="0.18"/>
+<path d="M870.0,945.0 l4,9 l9,4 l-9,4 l-4,9 l-4,-9 l-9,-4 l9,-4 z" fill="#FFFFFF"/>
+<text x="912.0" y="954.0" font-size="23" fill="#FFFFFF" font-weight="700" text-anchor="start" letter-spacing="0">Powered by Claude AI</text>
+<text x="912.0" y="982.0" font-size="16" fill="#DBEAFE" font-weight="400" text-anchor="start" letter-spacing="0">the smart drafting &amp; analysis under the hood</text>
+</svg>
