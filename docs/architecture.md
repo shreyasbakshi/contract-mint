@@ -4,6 +4,87 @@
 > several items below are intentionally aspirational. See
 > [`agent-contracts.md`](agent-contracts.md) for the as-built agent/data contracts.
 
+## Agent architecture (as built)
+
+Pattern: **single agent + tools, orchestrated by code** — not a multi-agent swarm.
+FastAPI routes are the orchestrator; three functions call Claude; everything else is
+deterministic. Every LLM call has a deterministic offline fallback (runs with no API key).
+
+```mermaid
+flowchart TD
+    M[Merchant] --> FE["Next.js frontend<br/>(Vercel + Clerk auth)"]
+    FE -->|HTTPS / JSON| API["FastAPI routes<br/>= the orchestrator"]
+
+    subgraph UC1["UC1 · Generation &amp; Revision"]
+        API --> G["POST /uc1/contracts"]
+        G --> DC["draft_contract()"]
+        DC --> BB["build_default_clauses()<br/>deterministic templates"]
+        DC -. free-text .-> RV["apply_instruction()"]
+        DC -. Marathi .-> TR["translate_to_marathi()"]
+        API --> Rv["POST /uc1/contracts/:id/revise"]
+        Rv --> RV
+    end
+
+    subgraph UC2["UC2 · Renewal Intelligence"]
+        API --> REN["GET /uc2/renewals<br/>date filter"]
+        API --> AN["POST /uc2/analyze"]
+        AN --> PERF["perf.py<br/>parse xlsx + detect breaches"]
+        PERF --> FIND["Findings"]
+        FIND --> GATE{"Merchant confirms<br/>which findings"}
+        GATE --> RL["POST /uc2/contracts/:id/redline"]
+        RL --> PR["propose_redlines()"]
+    end
+
+    RV --> LLM
+    TR --> LLM
+    PR --> LLM
+    LLM["LLM wrapper (llm.py)<br/>structured JSON output"]
+    LLM -->|"reasoning (redline)"| OPUS["Claude Opus 4.8"]
+    LLM -->|"drafting / revision / translate"| SON["Claude Sonnet 5"]
+    LLM -. no API key .-> OFF["Deterministic offline fallback"]
+
+    DC --> STORE[("store.py<br/>in-memory versions")]
+    RV --> STORE
+    PR --> STORE
+    STORE --> DOCX["docx_writer.py → DOCX"]
+```
+
+Legend: solid = always runs; dotted = conditional. Tracked changes (`ClauseChange` with
+`old/new/rationale/source`) mean edits are never silent overwrites.
+
+## Deployment topology (live)
+
+```mermaid
+flowchart LR
+    U["Merchant<br/>browser"] -->|HTTPS| V
+
+    subgraph Vercel["Vercel (frontend)"]
+        V["Next.js 15 app<br/>+ Clerk middleware"]
+    end
+
+    subgraph Clerk["Clerk (auth SaaS)"]
+        CK["Sign-in / sessions / users"]
+    end
+
+    subgraph Render["Render (backend)"]
+        R["FastAPI (uvicorn)<br/>in-memory store 🔜 Postgres"]
+    end
+
+    subgraph Anthropic["Anthropic API"]
+        CL["Claude Opus 4.8 / Sonnet 5"]
+    end
+
+    V <-->|auth| CK
+    V -->|"NEXT_PUBLIC_API_BASE<br/>REST + JSON"| R
+    R -->|"ANTHROPIC_API_KEY<br/>(optional; offline fallback)"| CL
+
+    GH["GitHub main"] -->|push auto-deploys| V
+    GH -->|blueprint auto-deploys| R
+```
+
+One `git push` to `main` fans out: Vercel rebuilds the frontend, Render rebuilds the
+backend. Clerk and the Anthropic API are external SaaS the app talks to at runtime.
+
 ## Stack
 - ✅ **Frontend:** Next.js (React, TypeScript). Runs on Replit for the demo.
   🔜 Lift to Vercel for production. Fresh design (HTML prototype is only a UC2 flow reference).
