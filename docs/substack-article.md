@@ -2,6 +2,8 @@
 
 *How I built Contract Mint — an AI that drafts supplier contracts and knows when to renegotiate them — without a "multi-agent swarm."*
 
+> **TL;DR** — India's small merchants sign supplier contracts blind and miss renewal windows worth real money. Contract Mint drafts those contracts in plain, India-law-aware language, and at renewal it reads the supplier's *actual performance data* to propose evidence-backed clause changes before you re-sign. The surprising part isn't the AI — it's how little autonomy I gave it. Here's why "less autonomous" is the right call when people are about to sign their name.
+
 ---
 
 ## The problem nobody sends you an invoice for
@@ -45,6 +47,8 @@ There is no message bus and no orchestrator process. The API routes *are* the or
                           │   no key    → offline mode  │
                           └────────────────────────────┘
 ```
+
+*(For Substack: upload [`docs/images/agent-architecture.png`](images/agent-architecture.png) in place of the ASCII above — it's the same diagram, rendered.)*
 
 Three design choices do all the heavy lifting:
 
